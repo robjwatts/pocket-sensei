@@ -1,0 +1,25 @@
+//Search For Martial Arts and Martial Arts Moves
+	//Search Martial Arts
+		//Youtube Intro
+		//Wikipedia Page
+		//Google Maps API of closest gyms
+	//Child: Search Specific Moves
+		//Youtube Videos
+		//Wikipedia Page
+//References
+	//Google Maps Links
+		//Places Search: https://developers.google.com/maps/documentation/javascript/examples/place-search
+		//Geolocation Search: https://developers.google.com/maps/documentation/javascript/examples/map-geolocation
+			//https://developers.google.com/web/fundamentals/native-hardware/user-location/
+	//Wikipedia API
+		//https://www.mediawiki.org/wiki/API:Search_and_discovery
+	//Youtube API
+		//http://info.lululemon.com/stores?mnid=ftr;en-US;store-locator 
+		//http://info.lululemon.com/stores?mnid=ftr;en-US;store-locator 
+		//https://developers.google.com/youtube/player_parameters
+//Page Formats
+	//Use Modals 
+		//separate htmls that load and are put in place of the main HTML
+	//Giphy layout structure
+//Functions
+
