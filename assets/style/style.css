@@ -11,6 +11,10 @@ body{
 	background-color:black;
 }
 
+.navbar{
+	border:none;
+}
+
 button {
 	margin-right:10px;
 	margin-bottom:30px;
@@ -26,4 +30,13 @@ button {
 	width:90%;
 	height:49.5px;
 	border:none;
+}
+
+#searchBtn{
+	width:50px;
+	height:50px;
+	color:#00ffed;
+	background-color:#ff8300;
+	border:none;
+	border-radius:0px;
 }
