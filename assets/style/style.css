@@ -9,11 +9,19 @@ body{
 
 .navbar{
 	background-color:black;
-}
-
-.navbar{
 	border:none;
 }
+
+.navbarBtn{
+	margin-right:10px;
+	margin-bottom:30px;
+	background-color:black;
+	color:#ffffff;
+	font-weight:bold;
+	border:none;
+	border-bottom:thick solid #00ffed;
+}
+
 
 button {
 	margin-right:10px;
@@ -25,7 +33,7 @@ button {
 	border-bottom:thick solid #00ffed;
 }
 
-#searchinput{
+#searchInput{
 	padding-left:10px;
 	width:90%;
 	height:49.5px;
