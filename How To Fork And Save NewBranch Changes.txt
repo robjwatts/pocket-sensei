@@ -1,0 +1,12 @@
+In Git Hub
+	1. Fork from the original user
+	2. clone from your repository
+Terminal
+	3. git checkout -b "newbranchname"
+	4. Make changes
+	5. git add 
+	6. git commit
+	7. git push origin newbranch name
+Back To Git Hub
+	8. Send Pull Request
+	9. Original User would either accept or deny 
