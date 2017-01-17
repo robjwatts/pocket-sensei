@@ -7,39 +7,9 @@ body{
 	background-color:black;
 }
 
-.jumbotron{
-	text-align:center;
+.navbar{
 	background-color:black;
 }
-
-.jumbotron h1{
-	color:#d816ff;
-	font-family: 'Roboto', sans-serif;
-	font-weight:bold;
-	font-size:80px;
-}
-.panel-heading {
-	text-align:left;
-	background-color:;
-}
-
-.item{
-	margin-top:10px;
-	margin-right:10px;
-	float:left;
-}
-
-
-img{
-	width:310px;
-	height:210px;
-}
-
-.container{
-	padding-left:50px;
-	padding-right:70px;
-}
-
 
 button {
 	margin-right:10px;
@@ -51,25 +21,9 @@ button {
 	border-bottom:thick solid #00ffed;
 }
 
-/*should change eventually for when screen shrinks*/
-
-
-/*should change eventually for when screen shrinks*/
-
-#GIF-input{
+#searchinput{
 	padding-left:10px;
 	width:90%;
 	height:49.5px;
 	border:none;
-}
-
-/*should change eventually for when screen shrinks*/
-
-#addGIF{
-	width:50px;
-	height:50px;
-	color:#00ffed;
-	background-color:#ff8300;
-	border:none;
-	border-radius:0px;
 }
