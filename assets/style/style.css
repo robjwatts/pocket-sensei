@@ -40,3 +40,10 @@ button {
 	border:none;
 	border-radius:0px;
 }
+
+
+ #map {
+        height: 400px;
+        width: 100%;
+       }
+
