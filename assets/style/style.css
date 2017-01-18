@@ -5,17 +5,16 @@ body, html{
 
 body{
 	background-color:black;
+	margin-left:30px;
 }
 
 .navbar{
 	background-color:black;
-}
-
-.navbar{
 	border:none;
 }
 
-button {
+
+.navbarBtn{
 	margin-right:10px;
 	margin-bottom:30px;
 	background-color:black;
@@ -23,6 +22,7 @@ button {
 	font-weight:bold;
 	border:none;
 	border-bottom:thick solid #00ffed;
+
 }
 
 #searchinput{
@@ -44,5 +44,10 @@ button {
  #map {
         height: 300px;
         width: 40%;
+}
+
+#player {
+	height:300px;
+	width:40%;
 }
 
