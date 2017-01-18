@@ -41,10 +41,15 @@
         // Here we construct our URL
         var queryURL = "https://en.wikipedia.org/w/api.php?action=query&titles=Main%20Page&prop=revisions&rvprop=content&format=json";
 
+        function setHeader(xhr){
+          xhr.setRequestHeader("Origin", "https://robjwatts.github.io")
+        }
+
         // Write code between the dashes below to hit the queryURL with $ajax, then take the response data
         $.ajax({
         url: queryURL,
-        method: "GET"
+        method: "GET", 
+        beforeSend: setHeader
         }).done(function(response) {
           console.log(response);
         
