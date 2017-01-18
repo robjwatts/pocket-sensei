@@ -40,3 +40,9 @@ button {
 	border:none;
 	border-radius:0px;
 }
+
+#map { /*Added This ID*/
+   width: 100%;
+   height: 400px;
+   background-color: grey;
+ }
