@@ -42,7 +42,8 @@
         var queryURL = "https://en.wikipedia.org/w/api.php?action=query&titles=Main%20Page&prop=revisions&rvprop=content&format=json";
 
         function setHeader(xhr){
-          xhr.setRequestHeader("Origin", "https://robjwatts.github.io")
+          xhr.setRequestHeader("Origin", "https://robjwatts.github.io");
+          xhr.setRequestHeader("Content-Type", "application/json; charset=UTF-8");
         }
 
         // Write code between the dashes below to hit the queryURL with $ajax, then take the response data
