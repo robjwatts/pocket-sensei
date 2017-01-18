@@ -10,7 +10,8 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 	<!--Jquery-->
 	<script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBtd0Rm6EoowNo16BoCBpQwxqgv40Z5P0U&callback=initMap"></script>"
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBtd0Rm6EoowNo16BoCBpQwxqgv40Z5P0U&callback=initMap"></script>"
+	<script type = "text/javascript" src="assets/javascript/googlemaps.js"></script>
 	<!--AIzaSyBtd0Rm6EoowNo16BoCBpQwxqgv40Z5P0U-->
 </head>
 
@@ -55,35 +56,7 @@
 	  		</div>
 	  	</div>
   		<!--End of search form-->
-
-
-  		 <style>
-       #map {
-        height: 400px;
-        width: 100%;
-       }
-    </style>
-  
-  <body>
-    <h3>Find a Gym nearby!</h3>
-    <div id="map"></div>
-    <script>
-      function initMap() {
-        var uluru = {lat: -25.363, lng: 131.044};
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 4,
-          center: uluru
-        });
-        var marker = new google.maps.Marker({
-          position: uluru,
-          map: map
-        });
-      }
-    </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBtd0Rm6EoowNo16BoCBpQwxqgv40Z5P0U&callback=initMap">
-    </script>
-
+ 
   		<!--Beginning of Google Maps ADDED-->
   		<div id="map"></div>
 
