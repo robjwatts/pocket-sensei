@@ -30,9 +30,9 @@
 			    <!-- Collect the nav links, forms, and other content for toggling -->
 			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			      	<ul class="nav navbar-nav">
-				        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-				        <li><a href="#">Link</a></li>
-				        <li class="dropdown">
+				        <li class="active navbarBtn"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+				        <li class="navbarBtn"><a href="#">Link</a></li>
+				        <li class="dropdown navbarBtn">
 				       		 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
 				         		<ul class="dropdown-menu">
 				            		<li><a href="#">Action</a></li>
@@ -49,19 +49,27 @@
 
 		<!--Beginning of search form-->
 		<div class="container-fluid">
-			<div class="row">
+			<div class="row search-row">
 	  			<form id="search-form">
 	  				<input type="text" id="searchinput" placeholder="Search..."><!--Changed placeholder to "Search"-->
 	  					<button type="button" class="btn btn-default" id="searchBtn"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button> 
 	  			</form>	
 	  		</div>
+	  		<!--Beginning of Youtube ADDED-->
+			<div class="row">
+				<div class="col-xs-6" id="wikipedia"></div>
+	  			<div class="col-xs-6 pull-right" id="player"></div>
+	  		</div>
+	  		<!--Beginning of Google Maps ADDED-->
+	  		<div class="row">
+	  			<div class="col pull-right" id="map"></div>
+	  		</div>
 	  	</div>
   		<!--End of search form-->
- 
-  		<!--Beginning of Google Maps ADDED-->
-  		<div id="map"></div>
 
-  		<div id="player"></div>
+		
+
+  		
 
   	
 

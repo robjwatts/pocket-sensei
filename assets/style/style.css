@@ -5,17 +5,17 @@ body, html{
 
 body{
 	background-color:black;
+	margin-left:30px;
+	margin-right:30px;
 }
 
 .navbar{
 	background-color:black;
-}
-
-.navbar{
 	border:none;
 }
 
-button {
+
+.navbarBtn{
 	margin-right:10px;
 	margin-bottom:30px;
 	background-color:black;
@@ -23,6 +23,7 @@ button {
 	font-weight:bold;
 	border:none;
 	border-bottom:thick solid #00ffed;
+
 }
 
 #searchinput{
@@ -31,6 +32,7 @@ button {
 	height:49.5px;
 	border:none;
 }
+
 
 #searchBtn{
 	width:50px;
@@ -43,6 +45,17 @@ button {
 
  #map {
         height: 300px;
-        width: 40%;
+        width: 38%;  
+        margin-right:10px;     
+}
+
+.container-fluid{
+	 padding-left:70px;
+	 padding-right:70px;
+}
+
+#player {
+	height:300px;
+	width:40%;
 }
 
