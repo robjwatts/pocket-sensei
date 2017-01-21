@@ -1,3 +1,6 @@
+
+<!--IP address: http://127.0.0.1:8080/-->
+
 <!DOCTYPE HTML>
 
 <html>
@@ -12,8 +15,9 @@
 	<script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
 	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBtd0Rm6EoowNo16BoCBpQwxqgv40Z5P0U&callback=initMap"></script>"
 	<script type = "text/javascript" src="assets/javascript/googlemaps.js"></script>
-	<!--youtube-->
-	<script src="assets/javascript/youtube.js"></script>
+
+	<!--LINK TO YOUTUBE API-->
+	 <script src="https://apis.google.com/js/api.js"></script>
 </head>
 
 <body>
@@ -58,11 +62,15 @@
 	  		<!--Beginning of Youtube ADDED-->
 			<div class="row">
 				<div class="col-xs-6" id="wikipedia"></div>
-	  			<div class="col-xs-6 pull-right" id="player"></div>
+	  			<!-- <div class="col-xs-6 pull-right" id="videos"></div> -->
 	  		</div>
 	  		<!--Beginning of Google Maps ADDED-->
 	  		<div class="row">
 	  			<div class="col pull-right" id="map"></div>
+	  		</div>
+
+	  		<div class="row">
+	  			<div class="col pull-right" id="videoPlay3"></div>
 	  		</div>
 	  	</div>
   		<!--End of search form-->
@@ -77,6 +85,8 @@
 		<p>Copyright 2009 Your name</p>
 	</footer>
 
+	<!--youtube-->
+	<script src="assets/javascript/youtube.js"></script>
 
 </body>
 
