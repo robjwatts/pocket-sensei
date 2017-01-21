@@ -1,10 +1,32 @@
+
 var map;
 var infoWindow;
 var service;
+var userLatitude;
+var userLongitude;
+var userCoordinates;
+
+function getLocation(){
+  if (navigator.geolocation){
+    navigator.geolocation.getCurrentPosition(function (position) {
+          console.log(position);
+          userCoordinates=position.coords;
+          userLatitude=userCoordinates.latitude;
+          userLongitude=userCoordinates.longitude; 
+          console.log(userCoordinates);
+          console.log(userLatitude);
+          console.log(userLongitude);
+    });
+  } else{
+    console.log("The Browser Does Not Support Geolocation");
+  };
+};
+
 function initMap() {
-  console.log("calling map")
+  getLocation();
+  console.log("calling map");
   map = new google.maps.Map(document.getElementById('map'), {
-  center: {lat: -33.867, lng: 151.206},
+  center: {lat: 40.7305297, lng: -74.0659878 },
   zoom: 15,
   styles: [{
   stylers: [{ visibility: 'simplified' }]
@@ -20,12 +42,13 @@ function initMap() {
   //The idle event is a debounced event, so we can query & listen without
   //throwing too many requests at the server.
   //map.addListener('idle', performSearch);
-  }
+
+}
 
 
 function callAjax (){
   var keywordName=$("#searchinput").val();
-  var queryURL="https://maps.googleapis.com/maps/api/geocode/json?address=-33.8670522,151.1957362&radius=500&type=gym&keyword=" + keywordName + "&key=AIzaSyBtd0Rm6EoowNo16BoCBpQwxqgv40Z5P0U"
+  var queryURL="https://maps.googleapis.com/maps/api/geocode/json?address=" + userLatitude + "," + userLongitude + "&radius=500&type=gym&keyword=" + keywordName + "&key=AIzaSyBtd0Rm6EoowNo16BoCBpQwxqgv40Z5P0U"
   $.ajax({
         url: queryURL,
         method: "GET"
