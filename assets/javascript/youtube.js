@@ -20,7 +20,9 @@
           // The method name `language.translations.list` comes from the API discovery.
            var request = gapi.client.youtube.search.list({
             q: query,
+            maxResults: 1,
             part: 'snippet'
+
             });
            return request;
         }).then(function(response) {
@@ -29,7 +31,7 @@
             var video = $('<div class="video">');
             video.append(item.snippet.title);
             video.append(item.snippet.description);
-            video.append('<iframe width="560" height="315" src="https://www.youtube.com/embed/' + item.id.videoId  + '" frameborder="0" allowfullscreen></iframe>');
+            video.append('<iframe width="500" height="300" src="https://www.youtube.com/embed/' + item.id.videoId  + '" frameborder="0" allowfullscreen></iframe>');
            $("#videoPlay3").prepend(video);
           })
         }, function(reason) {
