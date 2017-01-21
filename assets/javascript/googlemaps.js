@@ -16,17 +16,28 @@ function getLocation(){
           console.log(userCoordinates);
           console.log(userLatitude);
           console.log(userLongitude);
-    });
+
+
+          infoWindow = new google.maps.InfoWindow();
+          service = new google.maps.places.PlacesService(map);
+
+          initMap(userLatitude, userLongitude);
+
+  //The idle event is a debounced event, so we can query & listen without
+  //throwing too many requests at the server.
+  //map.addListener('idle', performSearch);
+
+      });
   } else{
     console.log("The Browser Does Not Support Geolocation");
   };
 };
 
-function initMap() {
+function initMap(userLatitude, userLongitude) {
   getLocation();
   console.log("calling map");
   map = new google.maps.Map(document.getElementById('map'), {
-  center: {lat: 40.7305297, lng: -74.0659878 },
+  center: {lat: userLatitude, lng: userLongitude },
   zoom: 15,
   styles: [{
   stylers: [{ visibility: 'simplified' }]
