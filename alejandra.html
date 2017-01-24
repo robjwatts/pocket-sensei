@@ -49,20 +49,27 @@
         url: "http://en.wikipedia.org/w/api.php?action=parse&format=json&prop=text&section=0&page="+wikiIntro+"&callback=?",
         contentType: "application/json; charset=utf-8",
         async: false,
-        dataType: "json",
-        success: function (data, textStatus, jqXHR) {
-            console.log(data, textStatus, jqXHR);
-            
-          if (data.error) {
-            $("#results").html("Error")
-          }
-          else if (data.parse.text) { 
-            $("#results").html(data.parse.text['*']);
-          }
-        },
-        error: function (errorMessage) {
-        }
+        dataType: "json"
+    }).done(function (data, textStatus, jqXHR) {
+      // console.log(data, textStatus, jqXHR);
+    
+      
+      if (data.error) {
+        $("#results").html("Search Not Found. Try Searching Again." )
+
+      }
+      else if (data.parse.text) { 
+       // var workable= $.parseHTML(data.parse.text['*'], $('#results'));
+       var search= $('#results>p:first', data.parse.text['*']);
+        $("#results")
+       console.log(search);
+        $("#results").html(data.parse.text['*']);
+        // console.log(data.parse.text['*']);
+      }
+    }).fail(function (err) {
+      console.log(err);
     });
+
 });
         
         //
