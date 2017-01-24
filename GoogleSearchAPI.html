@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Google-Serch API</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <script async="" src="//cse.google.com/adsense/search/async-ads.js"></script>
+  <script type="text/javascript" async="" src="http://www.google.com/cse/cse.js?cx='AIzaSyAzOZtjWlmJCgP-AWHMUWEcjYIwVF8jUAs'"></script>
+</head>
+
+<body>
+
+  <div id="test"></div>
+
+<script>
+var myCallback = function() {
+  if (document.readyState == 'complete') {
+    // Document is ready when CSE element is initialized.
+    // Render an element with both search box and search results in div with id 'test'.
+    google.search.cse.element.render(
+        {
+          div: "test",
+          tag: 'search'
+         });
+  } else {
+    // Document is not ready yet, when CSE element is initialized.
+    google.setOnLoadCallback(function() {
+       // Render an element with both search box and search results in div with id 'test'.
+        google.search.cse.element.render(
+            {
+              div: "test",
+              tag: 'search'
+            });
+    }, true);
+  }
+};
+
+// Insert it before the CSE code snippet so that cse.js can take the script
+// parameters, like parsetags, callbacks.
+window.__gcse = {
+  parsetags: 'explicit',
+  callback: myCallback
+};
+
+(function() {
+	console.log('inmidiate');
+
+  var cx = 'AIzaSyAzOZtjWlmJCgP-AWHMUWEcjYIwVF8jUAs'; 
+  var gcse = document.createElement('script'); gcse.type = 'text/javascript';
+  gcse.async = true;
+  gcse.src = 'https://cse.google.com/cse.js?cx=' + 'cx';
+  var s = document.getElementsByTagName('script')[0];
+  //s.parentNode.insertBefore(gcse, s);
+})();
+</script>
+
+<!-- Place this tag where you want both of the search box and the search results to render -->
+   <gcse:search>
+                <gcse:searchbox enableHistory="true" autoCompleteMaxCompletions="5" autoCompleteMatchType='any' queryParameterName="search" newWindow= false ></gcse:searchbox>
+  </gcse:search>
+      
+</body>
+
+</html>
