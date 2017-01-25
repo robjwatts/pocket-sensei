@@ -1,12 +1,17 @@
 body{
 	background-color:black;
-	max-width: 1000px;
+	width:100%;
 	margin: 0 auto;
 }
 .container{
-	max-width:1000px;
-	margin: 0 auto;
-	clear: both;
+	width:100%;
+	margin:0;
+
+}
+#mainContent{
+	width:100%;
+	margin-right:30px;
+	margin-left:40px;
 }
 .navbar{
 	background-color:black;
@@ -45,6 +50,7 @@ body{
 	width:90%;
 	height:49.5px;
 	border:none;
+	margin-left:12px;
 }
 
 #searchBtn{
