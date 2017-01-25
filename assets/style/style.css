@@ -91,3 +91,15 @@ body{
 	height:300px;
 	width:40%;
 }
+
+#splashImage {
+	width: 800px;
+	height: auto;
+	margin: auto;
+	padding: 0px;
+}
+
+.image {
+	position: relative;
+
+}
