@@ -19,7 +19,10 @@ body{
 #mainContent{
 	width:100%;
 	margin-right:30px;
-	margin-left:34px;
+	margin-left:30px;
+}
+.row{
+	margin-right:40px;
 }
 
 /*Beginning of Navbar Styling*/
@@ -79,7 +82,10 @@ body{
 }
 /*End of Search Bar Styling*/
 
-/*Beginning of Main Content Styling*/
+/*Beginning of Map Content Styling*/
+#mapRow{
+	margin-right:90px;
+}
 
  #map {
         height: 300px;
@@ -87,19 +93,12 @@ body{
         margin-right:10px;     
 }
 
+/*Beginning of video Content Styling*/
+#videoRow{
+	margin-right:90px;
+}
+
 #videoPlay3 {
 	height:300px;
 	width:40%;
-}
-
-#splashImage {
-	width: 800px;
-	height: auto;
-	margin: auto;
-	padding: 0px;
-}
-
-.image {
-	position: relative;
-
 }
