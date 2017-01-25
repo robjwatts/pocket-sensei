@@ -5,6 +5,7 @@ var service;
 var userLatitude;
 var userLongitude;
 var userCoordinates;
+var markerArray=[];
 
 function getLocation(){
   if (navigator.geolocation){
@@ -38,7 +39,7 @@ function initMap(userLatitude, userLongitude) {
   console.log("calling map");
   map = new google.maps.Map(document.getElementById('map'), {
   center: {lat: userLatitude, lng: userLongitude },
-  zoom: 15,
+  zoom: 11,
   styles: [{
   stylers: [{ visibility: 'simplified' }]
   }, {
@@ -59,7 +60,11 @@ function initMap(userLatitude, userLongitude) {
 
 function callAjax (){
   var keywordName=$("#searchinput").val();
-  var queryURL="https://maps.googleapis.com/maps/api/geocode/json?address=" + userLatitude + "," + userLongitude + "&radius=500&type=gym&keyword=" + keywordName + "&key=AIzaSyBtd0Rm6EoowNo16BoCBpQwxqgv40Z5P0U"
+  console.log(keywordName);
+  //var queryURL="https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + userLatitude + "," + userLongitude + "radius=5000&type=gym&keyword=" + keywordName + "&key=AIzaSyBtd0Rm6EoowNo16BoCBpQwxqgv40Z5P0U"
+
+  var queryURL="https://maps.googleapis.com/maps/api/geocode/json?address=" + userLatitude + "," + userLongitude + "&radius=40000&type=gym&keyword=" + keywordName + "&key=AIzaSyBtd0Rm6EoowNo16BoCBpQwxqgv40Z5P0U"
+  console.log(queryURL);
   $.ajax({
         url: queryURL,
         method: "GET"
@@ -70,13 +75,15 @@ function callAjax (){
                   var keywordName=$("#searchinput").val();
                   var request = {
                     bounds: map.getBounds(),
-                    type: keywordName,
+                    type: "gym",
+                    keyword: keywordName,
                   };
                   service.radarSearch(request, callback);
                 }
                 performSearch();
 
                 function callback(results, status) {
+                  console.log(results, status);
                   if (status !== google.maps.places.PlacesServiceStatus.OK) {
                     console.error(status);
                     return;
@@ -85,6 +92,7 @@ function callAjax (){
                     addMarker(result);
                   }
                 }
+
 
                 function addMarker(place) {
                   var marker = new google.maps.Marker({
@@ -95,7 +103,7 @@ function callAjax (){
                       anchor: new google.maps.Point(10, 10),
                       scaledSize: new google.maps.Size(10, 17)
                     }
-                  });
+                  });   
 
                   google.maps.event.addListener(marker, 'click', function() {
                     service.getDetails(place, function(result, status) {
@@ -107,17 +115,11 @@ function callAjax (){
                       infoWindow.open(map, marker);
                     });
                   });
-                }            
+                } 
+       
       });
 };
 
 $("#searchBtn").click( function(){
-  callAjax();
-});
-
-
-$("#searchBtn").on("click", function(){
-  console.log("hello");
-  event.preventDefault();
   callAjax();
 });
