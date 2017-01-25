@@ -5,29 +5,42 @@ body{
 }
 .container{
 	width:100%;
-	margin:0;
-
+	height:90px;
+	margin-right:40px;
+	margin-left:30px;
 }
+
+.container-fluid{
+	 padding-left:50px;
+	 padding-right:30px;
+}
+
+
 #mainContent{
 	width:100%;
 	margin-right:30px;
-	margin-left:40px;
+	margin-left:34px;
 }
+
+/*Beginning of Navbar Styling*/
 .navbar{
 	background-color:black;
 	border:none;
 }
 
 .navbar-brand{
-	max-width:400px;
+	width:300px;
 	padding:0;
 	margin:0;
+	margin-top:18px;
 }
 
 .navbarBtn{
-	margin-top: 20px;
+	height:50px;
+	margin-top: 25px;
 	margin-right:10px;
 	margin-bottom:20px;
+	padding-bottom:0px;
 	background-color:black;
 	color:#ffffff;
 	font-weight:bold;
@@ -45,12 +58,15 @@ body{
 .navbar-brand{
 	color: #FFFFFF;
 }
+/*Ending of Navbar Styling*/
+
+/*Beginning of Search Bar Styling*/
 #searchinput{
 	padding-left:10px;
 	width:90%;
 	height:49.5px;
 	border:none;
-	margin-left:12px;
+	margin-left:0px;
 }
 
 #searchBtn{
@@ -61,16 +77,14 @@ body{
 	border:none;
 	border-radius:0px;
 }
+/*End of Search Bar Styling*/
+
+/*Beginning of Main Content Styling*/
 
  #map {
         height: 300px;
         width: 38%;  
         margin-right:10px;     
-}
-
-.container-fluid{
-	 padding-left:30px;
-	 padding-right:30px;
 }
 
 #videoPlay3 {
