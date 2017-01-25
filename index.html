@@ -1,3 +1,6 @@
+
+<!--IP address: http://127.0.0.1:8080/-->
+
 <!DOCTYPE HTML>
 
 <html>
@@ -10,64 +13,92 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 	<!--Jquery-->
 	<script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
+
 	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBtd0Rm6EoowNo16BoCBpQwxqgv40Z5P0U&callback=initMap"></script>"
 	<script type = "text/javascript" src="assets/javascript/googlemaps.js"></script>
+
+	<!--LINK TO YOUTUBE API-->
+	 <script src="https://apis.google.com/js/api.js"></script>
+
+
+	
 	<!--youtube-->
 	<script src="assets/javascript/youtube.js"></script>
+
 </head>
 
 <body>
 
-		<nav class="navbar navbar-default">
-  			<div class="container-fluid">
-			    <!-- Brand and toggle get grouped for better mobile display -->
-			    <div class="navbar-header">
-			      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-			      </button>
-			      <a class="navbar-brand" href="#">Pocket Sensei</a>
-			    </div>
-
-			    <!-- Collect the nav links, forms, and other content for toggling -->
-			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+<div class="container">
+	<nav class="navbar navbar-default">
+  		<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+			  	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"></button>
+		    	<a class="navbar-brand" href="#"><img src="assets/images/logo.png" width="90%" height="auto"></a>
+			</div>
+			   	<!-- Collect the nav links, forms, and other content for toggling -->
+			   	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			      	<ul class="nav navbar-nav">
-				        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-				        <li><a href="#">Link</a></li>
-				        <li class="dropdown">
-				       		 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-				         		<ul class="dropdown-menu">
-				            		<li><a href="#">Action</a></li>
-				            		<li><a href="#">Another action</a></li>
-				            		<li><a href="#">Something else here</a></li>
-				            		<li role="separator" class="divider"></li>
-				            		<li><a href="#">Separated link</a></li>
-				            		<li role="separator" class="divider"></li>
-				            		<li><a href="#">One more separated link</a></li>
-				          		</ul>
-				        </li>
-			      	</ul>
-			    </div>
+				       	<li class="navbarBtn"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+				       	<li class="navbarBtn"><a href="#">Link</a></li>
+				       	<li class="dropdown navbarBtn">
+				       		<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+				         	<ul class="dropdown-menu">
+				            	<li><a href="#">Action</a></li>
+				            	<li><a href="#">Another action</a></li>
+				           		<li><a href="#">Something else here</a></li>
+				           		<li role="separator" class="divider"></li>
+				           		<li><a href="#">Separated link</a></li>
+				           		<li role="separator" class="divider"></li>
+				           		<li><a href="#">One more separated link</a></li>
+				       		</ul>
+				       	</li>
+			   		</ul>
+			   	</div>
+		    </div>
+		</div>
+	</nav>
 
 		<!--Beginning of search form-->
 		<div class="container-fluid">
-			<div class="row">
+			<div class="row search-row">
 	  			<form id="search-form">
 	  				<input type="text" id="searchinput" placeholder="Search..."><!--Changed placeholder to "Search"-->
 	  					<button type="button" class="btn btn-default" id="searchBtn"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button> 
 	  			</form>	
 	  		</div>
+	  		
+	  		<!--Beginning of Youtube ADDED-->
+			<div class="row">
+				<div class="col-xs-6" id="wikipedia"></div>
+	  			<!-- <div class="col-xs-6 pull-right" id="videos"></div> -->
+	  		</div>
+	  		
+	  		<!--Beginning of Google Maps ADDED-->
+	  		<div class="row">
+	  			<div class="col pull-right" id="map"></div>
+	  		</div>
+
+	  		<div class="row">
+	  			<div class="col pull-right" id="videoPlay3"></div>
+	  		</div>
 	  	</div>
   		<!--End of search form-->
- 
-  		<!--Beginning of Google Maps ADDED-->
-  		<div id="map"></div>
+</div>
+		
+  	<footer class="footer">
+   		<div class="container">
+        	<p class="text-muted">Copyright &copy; 2017 Pocket Sensei</p>
+      	</div>
+    </footer>
 
-  		<div id="player"></div>
+	<!--youtube-->
+	<script src="assets/javascript/youtube.js"></script>
 
-  	
-
-	<footer>
-		<p>Copyright 2009 Your name</p>
-	</footer>
+<script type = "text/javascript" src="assets/javascript/googlemaps.js"></script>
+<script type ="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBtd0Rm6EoowNo16BoCBpQwxqgv40Z5P0U&libraries=places&callback=initMap"></script>
+<script type = "text/javascript" src="assets/javascript/script.js"></script>
 
 
 </body>

@@ -43,7 +43,9 @@
         
         // Write code between the dashes below to hit the queryURL with $ajax, then take the response data
         $(document).ready(function(){
- 
+    $("button").click(function(){
+        $("#results").removeClass("references");
+      });
     $.ajax({
         type: "GET",
         url: "http://en.wikipedia.org/w/api.php?action=parse&format=json&prop=text&section=0&page="+wikiIntro+"&callback=?",
@@ -64,7 +66,9 @@
         $("#results")
        console.log(search);
         $("#results").html(data.parse.text['*']);
-        // console.log(data.parse.text['*']);
+
+      
+            // console.log(data.parse.text['*']);
       }
     }).fail(function (err) {
       console.log(err);
