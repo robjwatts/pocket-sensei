@@ -89,3 +89,12 @@ body{
 	position: relative;
 
 }
+
+p, th, a, span, li{
+	color: white;
+}
+
+caption {
+	color: white;
+	size: 400% !important;
+}

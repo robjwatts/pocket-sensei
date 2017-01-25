@@ -1,8 +1,8 @@
 
       // This .on("click") function will trigger the AJAX Call
       $("#searchBtn").on("click", function(event) {
-        $("#wikiResults").removeClass("mbox-text");
-        $("#wikiResults").removeClass("hide-when-compact");
+        $("#wikiResults").empty()
+    
 
         console.log("wiki wiki wiki wiki WIKI")
         // Preventing the submit button from trying to submit the form
