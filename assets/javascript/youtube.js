@@ -1,6 +1,10 @@
 
     // 'apiKey': 'AIzaSyBaodgFY4-d0mIdO68NmRIM763BxzA0TLU
       $("#searchBtn").on("click", function() {
+<<<<<<< HEAD
+=======
+         $(".image").remove()
+>>>>>>> 395f21712f4d5309ca6a4fab6ddbd472aeaba3b8
          $("#videoPlay3").empty();
 
         console.log("you just clicked the search button!");
