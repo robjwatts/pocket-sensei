@@ -1,6 +1,7 @@
 
     // 'apiKey': 'AIzaSyBaodgFY4-d0mIdO68NmRIM763BxzA0TLU
       $("#searchBtn").on("click", function() {
+        $(".image").remove()
          $("#videoPlay3").empty();
 
         console.log("you just clicked the search button!");
