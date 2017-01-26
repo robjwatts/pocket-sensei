@@ -2,6 +2,7 @@ body{
 	background-color:black;
 	width:100%;
 	margin: 0 auto;
+	font-family: 'Exo';
 }
 .container{
 	width:100%;
@@ -30,7 +31,10 @@ body{
 	background-color:black;
 	border:none;
 }
+.navbar-default .navbar-nav>li>a {
+ +    color: #ddaa50;
 
+}
 .navbar-brand{
 	width:300px;
 	padding:0;
@@ -54,12 +58,15 @@ body{
 }
 
 .navbarBtn:hover{
+	margin-top: 25px;
 	background-color: #c41c28;
-    color: #FFFFFF;
+ 
+    color: white;
 }
 
 .navbar-brand{
 	color: #FFFFFF;
+	margin-bottom:20px;
 }
 /*Ending of Navbar Styling*/
 
@@ -70,6 +77,8 @@ body{
 	height:49.5px;
 	border:none;
 	margin-left:0px;
+	margin-bottom: 75px;
+
 }
 
 #searchBtn{
@@ -100,7 +109,7 @@ body{
 }
 
 #splashImage {
-	width: 800px;
+	width: 300%;
 	height: auto;
 	margin: auto;
 	padding: 0px;
@@ -108,10 +117,11 @@ body{
 
 .image {
 	position: relative;
+	margin-right:50px;
 
 }
 
-p, th, a, span, li{
+p, th, a, span, li, td, .hatnote {
 	color: white;
 }
 
@@ -124,4 +134,32 @@ caption {
 	margin-right:90px;
 	text-align: justify;
     text-justify: inter-word;
+    float: left;
 }
+
+
+
+.footer {
+ +  position: absolute;
+ +  bottom: 0;
+ +  width: 100%;
+ +  /* Set the fixed height of the footer here */
+ +  height: 60px;
+ +  background-color: #ddaa50;
+ +  border-top:thick solid #c41c28;
+ +}
+ +.text-muted {
+ +    color: #c41c28;
+ +    margin-top: 20px;
+ +    text-align: center;
+ +    font-weight: bold;
+ +    font-size:16px;
+ +}
+ +.color1{
+ +	color: #ddaa50;
+ +	font-size: 20px;
+ +}
+ +.color2{
+ +	color: #c41c28;
+ +	font-size: 20px;
+  } 		  } 
