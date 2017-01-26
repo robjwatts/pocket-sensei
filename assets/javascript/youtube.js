@@ -34,7 +34,7 @@
           response.result.items.forEach(function(item) {
             var video = $('<div class="video">');
             video.append(item.snippet.title);
-            video.append(item.snippet.description);
+            // video.append(item.snippet.description);
             video.append('<iframe width="500" height="300" src="https://www.youtube.com/embed/' + item.id.videoId  + '" frameborder="0" allowfullscreen></iframe>');
            $("#videoPlay3").prepend(video);
           })
