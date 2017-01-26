@@ -77,6 +77,8 @@ body{
 	height:49.5px;
 	border:none;
 	margin-left:0px;
+	margin-bottom: 75px;
+
 }
 
 #searchBtn{
@@ -107,7 +109,7 @@ body{
 }
 
 #splashImage {
-	width: 800px;
+	width: 300%;
 	height: auto;
 	margin: auto;
 	padding: 0px;
@@ -115,10 +117,11 @@ body{
 
 .image {
 	position: relative;
+	margin-right:50px;
 
 }
 
-p, th, a, span, li{
+p, th, a, span, li, td, .hatnote {
 	color: white;
 }
 
@@ -131,6 +134,7 @@ caption {
 	margin-right:90px;
 	text-align: justify;
     text-justify: inter-word;
+    float: left;
 }
 
 
