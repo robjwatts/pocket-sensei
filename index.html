@@ -12,6 +12,10 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 	<!--Jquery-->
 	<script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBtd0Rm6EoowNo16BoCBpQwxqgv40Z5P0U&libraries=places"></script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBtd0Rm6EoowNo16BoCBpQwxqgv40Z5P0U&callback=initMap"></script>"
+	<script type = "text/javascript" src="assets/javascript/googlemaps.js"></script>
 
 	<!--LINK TO YOUTUBE API-->
 	 <script src="https://apis.google.com/js/api.js"></script>
@@ -53,20 +57,21 @@
 			   		</ul>
 			   	</div>
 		    </div>
-		</div>
-	</nav>
+		</nav>
 
-		<!--Beginning of search form-->
-		<div class="container-fluid" id="mainContent">
-			<div class="row search-row">
-	  			<form id="search-form">
-	  				<input type="text" id="searchinput" placeholder="Search..."><!--Changed placeholder to "Search"-->
-	  					<button type="button" class="btn btn-default" id="searchBtn"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button> 
-	  			</form>	
-	  		</div>
+	<!--Beginning of search form-->
+	<div class="container-fluid" id="mainContent">
+		<div class="row search-row">
+	  		<form id="search-form">
+	  			<input type="text" id="searchinput" placeholder="Search..."><!--Changed placeholder to "Search"-->
+	  				<button type="button" class="btn btn-default" id="searchBtn"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button> 
+	  		</form>	
+	  	</div>
 	  		
 			<div class="image">
-
+				<img id="splashImage" src="/assets/images/splashimg.jpg">
+			</div>
+    
 <img id="splashImage" src="assets/images/splashimg.jpg">
 
 
@@ -75,20 +80,22 @@
 <!--wiki results-->
    <div id= 'wikiResults'>
 
-      </div>
+   </div>
 
-	  		<!--Beginning of Youtube ADDED-->
-			<div class="row" id="wikipediaRow">
-				<div class="col-xs-6" id="wikipedia"></div>
-	  			<!-- <div class="col-xs-6 pull-right" id="videos"></div> -->
-	  		</div>
-	  		
-	  		<!--Beginning of Google Maps ADDED-->
-	  		<div class="row" id="mapRow">
-	  			<div class="col-xs-6" id="map"></div>
-	  			<div class="col-xs-6" id="videoPlay3"></div>
-	  		</div>
+	  	<!--Beginning of Youtube ADDED-->
+		<div class="row" id="wikipediaRow">
+			<div class="col-xs-6" id="wikipedia">
+			</div>
+	  		<!-- <div class="col-xs-6 pull-right" id="videos"></div> -->
 	  	</div>
+	  		
+	  	<!--Beginning of Google Maps ADDED-->
+	  	<div class="row" id="mapRow">
+	  		<div class="col-xs-6" id="map"></div>
+	  		<div class="col-xs-6" id="videoPlay3"></div>
+	  	</div>
+
+	</div>
   		<!--End of search form-->
 </div>
 		
