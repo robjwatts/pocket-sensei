@@ -1,7 +1,7 @@
     $(document).ready(function(){
       // This .on("click") function will trigger the AJAX Call
       $("#searchBtn").on("click", function(event) {
-        $("#wikiResults").empty()
+        $("#results").empty();
     
 
         console.log("wiki wiki wiki wiki WIKI")
