@@ -8,7 +8,7 @@ var userCoordinates;
 var markerArray=[];
 
 function getLocation(){
-  if (navigator.geolocation){
+  if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function (position) {
           console.log(position);
           userCoordinates=position.coords;
@@ -19,14 +19,7 @@ function getLocation(){
           console.log(userLongitude);
 
 
-          infoWindow = new google.maps.InfoWindow();
-          service = new google.maps.places.PlacesService(map);
-
-          initMap(userLatitude, userLongitude);
-
-  //The idle event is a debounced event, so we can query & listen without
-  //throwing too many requests at the server.
-  //map.addListener('idle', performSearch);
+           map.setCenter({lat: userLatitude, lng: userLongitude}); 
 
       });
   } else{
@@ -35,10 +28,10 @@ function getLocation(){
 };
 
 function initMap(userLatitude, userLongitude) {
-  getLocation();
+  
   console.log("calling map");
-  map = new google.maps.Map(document.getElementById('map'), {
-  center: {lat: userLatitude, lng: userLongitude },
+
+  var mapProperties = {
   zoom: 11,
   styles: [{
   stylers: [{ visibility: 'simplified' }]
@@ -46,11 +39,18 @@ function initMap(userLatitude, userLongitude) {
     elementType: 'labels',
     stylers: [{ visibility: 'off' }]
     }]
-  });
+  };
+
+  if (userLatitude && userLongitude) {
+    mapProperties.center = {lat: userLatitude, lng: userLongitude };
+  }
+
+  map = new google.maps.Map(document.getElementById('map'), mapProperties);
 
   infoWindow = new google.maps.InfoWindow();
   service = new google.maps.places.PlacesService(map);
 
+  getLocation();
   //The idle event is a debounced event, so we can query & listen without
   //throwing too many requests at the server.
   //map.addListener('idle', performSearch);
