@@ -1,3 +1,4 @@
+$(document).ready(function(){
 
       // This .on("click") function will trigger the AJAX Call
       $("#searchBtn").on("click", function(event) {
@@ -14,11 +15,11 @@
         
         
         // Write code between the dashes below to hit the queryURL with $ajax, then take the response data
-        $(document).ready(function(){
+    
  
     $.ajax({
         type: "GET",
-        url: "http://en.wikipedia.org/w/api.php?action=parse&format=json&prop=text&section=0&page="+wikiIntro+"&callback=?",
+        url: "https://en.wikipedia.org/w/api.php?action=parse&format=json&prop=text&section=0&page="+wikiIntro+"&callback=?",
         contentType: "application/json; charset=utf-8",
         async: false,
         dataType: "json"
@@ -30,25 +31,26 @@
         $("#wikiResults").html("Search Not Found. Try Searching Again." )
       }
       else if (data.parse.text) { 
-       // var workable= $.parseHTML(data.parse.text['*'], $('#results'));
-       var search= $('#wikiResults>p:first', data.parse.text['*']);
-        $("#wikiResults")
+
+        console.log('prsed results',  $.parseHTML(data.parse.text['*']));
+      
+       var search= $('#results > p:first', $.parseHTML(data.parse.text['*']));
+     
        console.log(search);
+        
+//code use to remove images and references (clean Wiki API respose)
+
         $("#wikiResults").html(data.parse.text['*']);
-        // console.log(data.parse.text['*']);
+       
+        $("#wikiResults").remove(".references");
+
+        $("#wikiResults").find('img, .mbox-image, .mbox-text.plainlist, .references').remove();
+
+      
       }
     }).fail(function (err) {
       console.log(err);
     });
 });
-        
-        //
-        // 
-        //
-        //
-        // YOUR CODE GOES IN THESE DASHES. DO NOT MANUALLY EDIT THE HTML ABOVE
+     
          });
-        // =================================================================
-        // CODE GOES HERE
-        // =================================================================
-      

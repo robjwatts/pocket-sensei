@@ -42,7 +42,11 @@
         
         
         // Write code between the dashes below to hit the queryURL with $ajax, then take the response data
-        $(document).ready(function(){
+  $(document).ready(function(){
+
+        $( "#results" ).click(function() {
+        $( "#find-intro" ).keypress();
+        });  
  
     $.ajax({
         type: "GET",
@@ -52,31 +56,29 @@
         dataType: "json"
     }).done(function (data, textStatus, jqXHR) {
       // console.log(data, textStatus, jqXHR);
-    $( "#result" ).click(function() {
-    $( "#find-intro" ).keypress();
-    });
-      
+    
       if (data.error) {
         $("#results").html("Search Not Found. Try Searching Again." )
 
       }
       else if (data.parse.text) { 
+        //(ajax call gives back) results, lives in ['*']->text->parse->data
        // var workable= $.parseHTML(data.parse.text['*'], $('#results'));
        var search= $('#results>p:first', data.parse.text['*']);
         // $("#results")
         $('.references').remove();
         console.log('references',$('.references', search))
         //console.log(search);
-        $("img").remove();
-        console('img'), $("img")
+        //$("img").remove();
+        //console('img'), $("img")
 
-      $("#results").html(data.parse.text[*]);
+      $("#results").html(data.parse.text['*']);
 
       $("button").click(function(){
 
       $("#results").remove(".references");
-
-      $("img").remove();
+//find = search in the results box
+      $("#results").find("img, mbox-image, .references ").remove();
       });
             // console.log(data.parse.text['*']);
       }
