@@ -2,7 +2,7 @@ body{
 	background-color:black;
 	width:100%;
 	margin: 0 auto;
-	font-family: 'Exo';
+	font-family: 'Roboto';
 }
 .container{
 	width:100%;
@@ -109,7 +109,7 @@ body{
 }
 
 #splashImage {
-	width: 300%;
+	width: 100%;
 	height: auto;
 	margin: auto;
 	padding: 0px;

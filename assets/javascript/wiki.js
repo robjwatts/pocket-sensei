@@ -36,6 +36,10 @@
        console.log(search);
         $("#wikiResults").html(data.parse.text['*']);
         // console.log(data.parse.text['*']);
+
+        $("#wikiResults").remove(".references");
+
+        $("#wikiResults").find("img").remove();
       }
     }).fail(function (err) {
       console.log(err);
