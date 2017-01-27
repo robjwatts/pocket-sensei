@@ -14,7 +14,7 @@
     <!-- We'll be dumping our JSON contents in here -->
     <div id="intro-view"></div>
 
-    <!-- This form will be where users input data about the movies -->
+    <!-- This form will be where users input data about the serch -->
     <form id="intro-form">
       <label for="wiki-input">Search</label>
       <input type="text" id="wiki-input"><br>
@@ -22,7 +22,7 @@
       <!-- This button will trigger our AJAX call -->
       <input id="find-intro" type="submit" value=" Search">
       <div id= 'results'>Results 
-
+     
       </div>
     </form>
 
@@ -52,7 +52,9 @@
         dataType: "json"
     }).done(function (data, textStatus, jqXHR) {
       // console.log(data, textStatus, jqXHR);
-    
+    $( "#result" ).click(function() {
+    $( "#find-intro" ).keypress();
+    });
       
       if (data.error) {
         $("#results").html("Search Not Found. Try Searching Again." )
@@ -61,12 +63,20 @@
       else if (data.parse.text) { 
        // var workable= $.parseHTML(data.parse.text['*'], $('#results'));
        var search= $('#results>p:first', data.parse.text['*']);
-        $("#results")
-       console.log(search);
-        $("#results").html(data.parse.text['*']);
+        // $("#results")
+        $('.references').remove();
+        console.log('references',$('.references', search))
+        //console.log(search);
+        $("img").remove();
+        console('img'), $("img")
+
+      $("#results").html(data.parse.text[*]);
 
       $("button").click(function(){
-        $("#results").removeClass("references");
+
+      $("#results").remove(".references");
+
+      $("img").remove();
       });
             // console.log(data.parse.text['*']);
       }
