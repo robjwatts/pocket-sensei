@@ -1,4 +1,4 @@
-
+    $(document).ready(function(){
       // This .on("click") function will trigger the AJAX Call
       $("#searchBtn").on("click", function(event) {
         $("#wikiResults").empty()
@@ -14,7 +14,7 @@
         
         
         // Write code between the dashes below to hit the queryURL with $ajax, then take the response data
-        $(document).ready(function(){
+    
  
     $.ajax({
         type: "GET",
@@ -30,16 +30,22 @@
         $("#wikiResults").html("Search Not Found. Try Searching Again." )
       }
       else if (data.parse.text) { 
+
+        console.log('prsed results',  $.parseHTML(data.parse.text['*']));
        // var workable= $.parseHTML(data.parse.text['*'], $('#results'));
-       var search= $('#wikiResults>p:first', data.parse.text['*']);
-        $("#wikiResults")
+       var search= $('#results > p:first', $.parseHTML(data.parse.text['*']));
+        // $("#wikiResults")
        console.log(search);
+        
+
         $("#wikiResults").html(data.parse.text['*']);
         // console.log(data.parse.text['*']);
 
         $("#wikiResults").remove(".references");
 
-        $("#wikiResults").find("img").remove();
+         $("#wikiResults").find('img').remove();
+
+      
       }
     }).fail(function (err) {
       console.log(err);
