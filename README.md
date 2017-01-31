@@ -1,0 +1,1 @@
+-Pocket Sensei serves as an exercise in learning how to leverage data from a variety of APIs, including Wikipedia, Youtube, and Google Maps.
